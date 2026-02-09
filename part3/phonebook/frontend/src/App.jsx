@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Filter from './components/Filter.jsx'
 import NewEntry from './components/NewEntry.jsx'
 import PersonList from './components/PersonList.jsx'
@@ -70,6 +69,13 @@ const App = () => {
       setNewNumber('')
       setNotificationMessage(`Added ${createdPerson.name}`)
       setNotificationClass('success')
+      setTimeout(() => {
+        setNotificationMessage(null)
+        setNotificationClass(null)
+      }, 5000)
+    }).catch((error) => {
+      setNotificationMessage(error.response.data.error)
+      setNotificationClass('error')
       setTimeout(() => {
         setNotificationMessage(null)
         setNotificationClass(null)
