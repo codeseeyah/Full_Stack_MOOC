@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development node --watch index.js",
+    "test": "cross-env NODE_ENV=test node --test",
+    "lint": "eslint ."
+  },
+  "author": "qudsia",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "lodash": "^4.17.23",
+    "mongoose": "^9.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.8.0",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "supertest": "^7.2.2"
+  }
+}
